@@ -1,89 +1,117 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Set current year in footer
-    const yearSpan = document.getElementById('current-year');
-    if(yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
-
-    // Load Data
-    fetchData();
-});
-
 let appData = null;
 
+document.addEventListener('DOMContentLoaded', () => {
+  setCurrentYear();
+  initNavigation();
+  fetchData();
+});
+
+function setCurrentYear() {
+  document.querySelectorAll('#current-year').forEach(el => {
+    el.textContent = new Date().getFullYear();
+  });
+}
+
+function initNavigation() {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.getElementById('mainNav');
+  const dropdown = document.querySelector('.dropdown');
+  const dropbtn = document.querySelector('.dropbtn');
+
+  if (toggle && nav) {
+    const closeMenu = () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      const icon = toggle.querySelector('i');
+      if (icon) icon.className = 'fa-solid fa-bars';
+    };
+
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+      const icon = toggle.querySelector('i');
+      if (icon) icon.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    });
+
+    nav.addEventListener('click', e => {
+      if (e.target.closest('a') && !e.target.closest('.dropdown-content')) closeMenu();
+    });
+
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.main-header')) closeMenu();
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 820) closeMenu();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
+
+  if (dropdown && dropbtn) {
+    dropbtn.addEventListener('click', e => {
+      e.preventDefault();
+      const open = dropdown.classList.toggle('open');
+      dropbtn.setAttribute('aria-expanded', String(open));
+    });
+
+    document.addEventListener('click', e => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+        dropbtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+}
+
 async function fetchData() {
-    try {
-        const response = await fetch('data/food_data.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        appData = await response.json();
-
-        // Populate Navigation and Footer Categories
-        populateCategories();
-
-        // Render Home Page Categories if on index
-        if(document.getElementById('home-categories-grid')) {
-            renderHomeCategories();
-        }
-
-        // Dispatch event that data is loaded
-        document.dispatchEvent(new CustomEvent('dataLoaded', { detail: appData }));
-
-    } catch (error) {
-        console.error("Could not fetch data:", error);
-    }
+  try {
+    const response = await fetch('data/food_data.json', { cache: 'no-cache' });
+    if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+    appData = await response.json();
+    populateCategories();
+    if (document.getElementById('home-categories-grid')) renderHomeCategories();
+    document.dispatchEvent(new CustomEvent('dataLoaded', { detail: appData }));
+  } catch (error) {
+    console.error('تعذر تحميل البيانات:', error);
+    document.querySelectorAll('.loader').forEach(el => {
+      el.className = 'error-state';
+      el.innerHTML = '<i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i><h2>تعذر تحميل البيانات</h2><p>تحقق من الاتصال ثم أعد تحميل الصفحة.</p>';
+    });
+  }
 }
 
 function populateCategories() {
-    if (!appData || !appData.categories) return;
+  if (!appData?.categories) return;
+  const navCategories = document.getElementById('nav-categories');
+  const footerCategories = document.getElementById('footer-categories');
 
-    const navCategories = document.getElementById('nav-categories');
-    const footerCategories = document.getElementById('footer-categories');
+  const navHTML = appData.categories.map(cat =>
+    `<a href="category.html?id=${encodeURIComponent(cat.id)}">${cat.name}</a>`
+  ).join('');
 
-    let navHTML = '';
-    let footerHTML = '';
+  const footerHTML = appData.categories.map(cat =>
+    `<li><a href="category.html?id=${encodeURIComponent(cat.id)}">${cat.name}</a></li>`
+  ).join('');
 
-    appData.categories.forEach(cat => {
-        const link = `category.html?id=${cat.id}`;
-        navHTML += `<a href="${link}">${cat.name}</a>`;
-        footerHTML += `<li><a href="${link}">${cat.name}</a></li>`;
-    });
-
-    if(navCategories) navCategories.innerHTML = navHTML;
-    if(footerCategories) footerCategories.innerHTML = footerHTML;
+  if (navCategories) navCategories.innerHTML = navHTML;
+  if (footerCategories) footerCategories.innerHTML = footerHTML;
 }
 
 function renderHomeCategories() {
-    const grid = document.getElementById('home-categories-grid');
-    if(!grid || !appData) return;
+  const grid = document.getElementById('home-categories-grid');
+  if (!grid || !appData) return;
 
-    let html = '';
-    appData.categories.forEach(cat => {
-        // Calculate count dynamically
-        const count = appData.foods.filter(food => food.categoryId === cat.id).length;
-
-        html += `
-            <a href="category.html?id=${cat.id}" class="category-card">
-                <img src="${cat.image}" alt="${cat.name}">
-                <h3>${cat.name}</h3>
-                <p>${cat.description}</p>
-                <div class="category-count">${count} أنواع</div>
-            </a>
-        `;
-    });
-
-    grid.innerHTML = html;
+  grid.innerHTML = appData.categories.map(cat => {
+    const count = appData.foods.filter(food => food.categoryId === cat.id).length;
+    return `
+      <a href="category.html?id=${encodeURIComponent(cat.id)}" class="category-card">
+        <img src="${cat.image}" alt="${cat.name}" loading="lazy" decoding="async" width="400" height="300">
+        <h3>${cat.name}</h3>
+        <p>${cat.description}</p>
+        <span class="category-count">${count} أنواع</span>
+      </a>`;
+  }).join('');
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
-});
