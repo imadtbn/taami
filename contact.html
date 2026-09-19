@@ -1,115 +1,46 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="دليلك الغذائي الشامل: اكتشف القيمة الغذائية لكل طبق. موقع يهتم بالصحة والتغذية.">
-    <title>اتصل بنا - دليلك الغذائي الشامل</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header class="main-header">
-        <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <i class="fa-solid fa-leaf"></i> دليلك الغذائي الشامل
-                </a>
-            </div>
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">الفئات <i class="fa-solid fa-caret-down"></i></a>
-                        <div class="dropdown-content" id="nav-categories"></div>
-                    </li>
-                    <li><a href="favorites.html">المفضلة</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="contact.html" class="active">اتصل بنا</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <div class="search-box">
-                    <form action="search.html" method="GET">
-                        <input type="text" name="q" placeholder="ابحث عن طعام أو فئة..." required>
-                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                </div>
-                <div class="mobile-menu-toggle"><i class="fa-solid fa-bars"></i></div>
-            </div>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <div class="container page-container">
-            <h1 class="page-title">اتصل بنا</h1>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>معلومات التواصل</h3>
-                    <p>نحن دائماً هنا للإجابة على استفساراتك واقتراحاتك.</p>
-                    <ul class="info-list">
-                        <li><i class="fa-solid fa-envelope"></i> info@dalilik-alghithai.com</li>
-                        <li><i class="fa-solid fa-phone"></i> +966 50 000 0000</li>
-                        <li><i class="fa-solid fa-location-dot"></i> الرياض، المملكة العربية السعودية</li>
-                    </ul>
-                </div>
-                <div class="contact-form">
-                    <h3>أرسل لنا رسالة</h3>
-                    <form action="#" method="POST" onsubmit="alert('تم إرسال رسالتك بنجاح!'); return false;">
-                        <div class="form-group">
-                            <label for="name">الاسم</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">البريد الإلكتروني</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">الرسالة</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">إرسال الرسالة</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="main-footer">
-        <!-- Same as other pages -->
-        <div class="container footer-container">
-            <div class="footer-section">
-                <h3>روابط سريعة</h3>
-                <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="contact.html">اتصل بنا</a></li>
-                    <li><a href="favorites.html">المفضلة</a></li>
-                    <li><a href="privacy.html">سياسة الخصوصية</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>الفئات الرئيسية</h3>
-                <ul id="footer-categories"></ul>
-            </div>
-            <div class="footer-section">
-                <h3>تواصل معنا</h3>
-                <div class="footer-logo">
-                    <i class="fa-solid fa-leaf"></i> دليلك الغذائي الشامل
-                </div>
-                <p>صحتك تبدأ من مطبخك... بمعرفة ما تأكل</p>
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> دليلك الغذائي الشامل. جميع الحقوق محفوظة.</p>
-        </div>
-    </footer>
-    <script src="js/main.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#18864b">
+  <meta name="description" content="صفحة التواصل والملاحظات الخاصة بدليلك الغذائي الشامل.">
+  <link rel="canonical" href="https://imadtbn.github.io/taami/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_DZ">
+  <meta property="og:title" content="اتصل بنا | دليلك الغذائي الشامل">
+  <meta property="og:description" content="صفحة التواصل والملاحظات الخاصة بدليلك الغذائي الشامل.">
+  <meta property="og:url" content="https://imadtbn.github.io/taami/contact.html">
+  <title>اتصل بنا | دليلك الغذائي الشامل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head><body><a class="skip-link" href="#main-content">تجاوز إلى المحتوى</a>
+<header class="main-header">
+  <div class="container header-container">
+    <div class="logo"><a href="index.html" aria-label="الصفحة الرئيسية"><i class="fa-solid fa-leaf" aria-hidden="true"></i><span>دليلك الغذائي الشامل</span></a></div>
+    <nav class="main-nav" id="mainNav" aria-label="التنقل الرئيسي">
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li class="dropdown"><button class="dropbtn" type="button" aria-expanded="false" aria-controls="nav-categories">الفئات <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button><div class="dropdown-content" id="nav-categories"></div></li>
+        <li><a href="favorites.html">المفضلة</a></li>
+        <li><a href="about.html" >من نحن</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">اتصل بنا</a></li>
+        <li class="mobile-search"><form action="search.html" method="GET" role="search"><label class="sr-only" for="mobile-q">ابحث في الأغذية</label><input id="mobile-q" type="search" name="q" placeholder="ابحث عن طعام..." required><button type="submit" aria-label="بحث"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button></form></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box"><form action="search.html" method="GET" role="search"><label class="sr-only" for="header-q">ابحث في الأغذية</label><input id="header-q" type="search" name="q" placeholder="ابحث..." required><button type="submit" aria-label="بحث"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button></form></div>
+      <button class="mobile-menu-toggle" type="button" aria-label="فتح القائمة" aria-controls="mainNav" aria-expanded="false"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</header>
+<main class="main-content" id="main-content"><div class="container page-container"><h1 class="page-title">اتصل بنا</h1><p class="slogan">ملاحظاتك تساعد على تحسين الدليل وتوسيع محتواه.</p>
+<div class="contact-wrapper">
+  <section class="contact-info"><h3>اقتراح أو تصحيح</h3><p>يمكن استخدام مستودع المشروع على GitHub للإبلاغ عن خطأ في البيانات أو اقتراح تحسين للموقع.</p><ul class="info-list"><li><i class="fa-brands fa-github" aria-hidden="true"></i><a href="https://github.com/imadtbn/taami" target="_blank" rel="noopener noreferrer">مستودع taami على GitHub</a></li></ul></section>
+  <section class="contact-form"><h3>قبل إرسال الملاحظة</h3><p>عند الإبلاغ عن مشكلة، يُفضّل ذكر اسم الصفحة أو الطعام ووصف المشكلة باختصار. لا يوجد نموذج إرسال مباشر مفعّل حاليًا، لذلك أزلنا النموذج التجريبي الذي كان يوحي بإرسال رسالة دون إرسالها فعليًا.</p><a class="btn" href="https://github.com/imadtbn/taami/issues" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> فتح صفحة الملاحظات</a></section>
+</div></div></main><footer class="main-footer"><div class="container footer-container">
+<section class="footer-section"><h3>روابط سريعة</h3><ul><li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="contact.html">اتصل بنا</a></li><li><a href="favorites.html">المفضلة</a></li><li><a href="privacy.html">سياسة الخصوصية</a></li></ul></section>
+<section class="footer-section"><h3>الفئات الرئيسية</h3><ul id="footer-categories"></ul></section>
+<section class="footer-section"><h3>عن الدليل</h3><div class="footer-logo"><i class="fa-solid fa-leaf" aria-hidden="true"></i> دليلك الغذائي الشامل</div><p>واجهة عربية مبسطة لاستكشاف القيم الغذائية ومقارنة الأطعمة.</p></section>
+</div><div class="footer-bottom"><p>&copy; <span id="current-year"></span> دليلك الغذائي الشامل. جميع الحقوق محفوظة.</p></div></footer><script src="js/main.js"></script></body></html>
