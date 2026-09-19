@@ -1,66 +1,62 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="دليلك الغذائي الشامل: اكتشف القيمة الغذائية لكل طبق. موقع يهتم بالصحة والتغذية.">
-    <title>المفضلة - دليلك الغذائي الشامل</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header class="main-header">
-        <!-- Header Content -->
-        <div class="container header-container">
-            <div class="logo"><a href="index.html"><i class="fa-solid fa-leaf"></i> دليلك الغذائي الشامل</a></div>
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">الفئات <i class="fa-solid fa-caret-down"></i></a>
-                        <div class="dropdown-content" id="nav-categories"></div>
-                    </li>
-                    <li><a href="favorites.html" class="active">المفضلة</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="contact.html">اتصل بنا</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <div class="search-box">
-                    <form action="search.html" method="GET">
-                        <input type="text" name="q" placeholder="ابحث..." required>
-                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <div class="container page-container">
-            <h1 class="page-title">قائمتي المفضلة</h1>
-
-            <div class="foods-grid" id="favorites-grid">
-                <!-- Favorite items will be loaded here -->
-            </div>
-        </div>
-    </main>
-
-    <footer class="main-footer">
-        <!-- Footer Content -->
-        <div class="container footer-container">
-            <div class="footer-section"><h3>روابط سريعة</h3><ul><li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="favorites.html">المفضلة</a></li></ul></div>
-            <div class="footer-section"><h3>الفئات الرئيسية</h3><ul id="footer-categories"></ul></div>
-            <div class="footer-section">
-                <h3>تواصل معنا</h3>
-                <div class="footer-logo"><i class="fa-solid fa-leaf"></i> دليلك الغذائي الشامل</div>
-                <div class="social-links"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
-            </div>
-        </div>
-        <div class="footer-bottom"><p>&copy; <span id="current-year"></span> جميع الحقوق محفوظة.</p></div>
-    </footer>
-    <script src="js/main.js"></script>
-    <script src="js/favorites.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#18864b">
+  <meta name="description" content="احتفظ بالأطعمة المفضلة لديك محليًا على جهازك للوصول إلى قيمها الغذائية بسرعة.">
+  <link rel="canonical" href="https://imadtbn.github.io/taami/favorites.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_DZ">
+  <meta property="og:title" content="المفضلة | دليلك الغذائي الشامل">
+  <meta property="og:description" content="احتفظ بالأطعمة المفضلة لديك محليًا على جهازك للوصول إلى قيمها الغذائية بسرعة.">
+  <meta property="og:url" content="https://imadtbn.github.io/taami/favorites.html">
+  <title>المفضلة | دليلك الغذائي الشامل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head><body>
+<a class="skip-link" href="#main-content">تجاوز إلى المحتوى</a>
+<header class="main-header">
+  <div class="container header-container">
+    <div class="logo"><a href="index.html" aria-label="الصفحة الرئيسية"><i class="fa-solid fa-leaf" aria-hidden="true"></i><span>دليلك الغذائي الشامل</span></a></div>
+    <nav class="main-nav" id="mainNav" aria-label="التنقل الرئيسي">
+      <ul class="nav-links">
+        <li><a href="index.html" >الرئيسية</a></li>
+        <li class="dropdown">
+          <button class="dropbtn " type="button" aria-expanded="false" aria-controls="nav-categories">الفئات <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="dropdown-content" id="nav-categories"></div>
+        </li>
+        <li><a href="favorites.html" class="active" aria-current="page">المفضلة</a></li>
+        <li><a href="about.html" >من نحن</a></li>
+        <li><a href="contact.html" >اتصل بنا</a></li>
+        <li class="mobile-search">
+          <form action="search.html" method="GET" role="search">
+            <label class="sr-only" for="mobile-q">ابحث في الأغذية</label>
+            <input id="mobile-q" type="search" name="q" placeholder="ابحث عن طعام..." required>
+            <button type="submit" aria-label="بحث"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <form action="search.html" method="GET" role="search">
+          <label class="sr-only" for="header-q">ابحث في الأغذية</label>
+          <input id="header-q" type="search" name="q" placeholder="ابحث..." required>
+          <button type="submit" aria-label="بحث"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+        </form>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-label="فتح القائمة" aria-controls="mainNav" aria-expanded="false"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</header>
+<main class="main-content" id="main-content"><div class="container page-container"><h1 class="page-title">قائمتي المفضلة</h1><p class="slogan">الأطعمة التي حفظتها على هذا الجهاز.</p><div class="foods-grid" id="favorites-grid"></div></div></main>
+<footer class="main-footer">
+  <div class="container footer-container">
+    <section class="footer-section"><h3>روابط سريعة</h3><ul><li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="contact.html">اتصل بنا</a></li><li><a href="favorites.html">المفضلة</a></li><li><a href="privacy.html">سياسة الخصوصية</a></li></ul></section>
+    <section class="footer-section"><h3>الفئات الرئيسية</h3><ul id="footer-categories"></ul></section>
+    <section class="footer-section"><h3>عن الدليل</h3><div class="footer-logo"><i class="fa-solid fa-leaf" aria-hidden="true"></i> دليلك الغذائي الشامل</div><p>واجهة عربية مبسطة لاستكشاف القيم الغذائية ومقارنة الأطعمة.</p></section>
+  </div>
+  <div class="footer-bottom"><p>&copy; <span id="current-year"></span> دليلك الغذائي الشامل. جميع الحقوق محفوظة.</p></div>
+</footer><script src="js/main.js"></script><script src="js/favorites.js"></script></body></html>
