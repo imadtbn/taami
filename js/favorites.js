@@ -1,49 +1,45 @@
-document.addEventListener('DOMContentLoaded', () => {
-    renderFavorites();
-});
+document.addEventListener('DOMContentLoaded', renderFavorites);
+
+function getFavorites() {
+  try {
+    const value = JSON.parse(localStorage.getItem('favorites'));
+    return Array.isArray(value) ? value : [];
+  } catch {
+    return [];
+  }
+}
 
 function renderFavorites() {
-    const grid = document.getElementById('favorites-grid');
-    if(!grid) return;
+  const grid = document.getElementById('favorites-grid');
+  if (!grid) return;
+  const favorites = getFavorites();
 
-    let favs = JSON.parse(localStorage.getItem('favorites')) || [];
+  if (!favorites.length) {
+    grid.innerHTML = '<div class="empty-state"><i class="fa-regular fa-heart" aria-hidden="true"></i><h2>قائمة المفضلة فارغة</h2><p>أضف الأطعمة التي تهمك من صفحة التفاصيل لتظهر هنا.</p><a class="btn" href="index.html">استكشف الأغذية</a></div>';
+    return;
+  }
 
-    if(favs.length === 0) {
-        grid.innerHTML = '<p class="empty-msg" style="grid-column: 1 / -1; text-align: center; color: var(--text-light);">قائمة المفضلة لديك فارغة. ابدأ بتصفح الأطعمة وإضافتها هنا!</p>';
-        return;
-    }
+  grid.innerHTML = favorites.map(food => `
+    <article class="food-card">
+      <img src="${food.image}" alt="${food.name}" loading="lazy" decoding="async" width="600" height="400">
+      <div class="food-info">
+        <h3>${food.name}</h3>
+        <p class="food-cal">${food.calories} سعرة حرارية / 100غ</p>
+        <div class="food-macros"><span>محفوظ في المفضلة</span></div>
+        <div class="favorite-actions">
+          <a href="product.html?id=${encodeURIComponent(food.id)}" class="btn">التفاصيل</a>
+          <button class="btn btn-danger btn-remove-fav" type="button" data-id="${food.id}" aria-label="حذف ${food.name} من المفضلة"><i class="fa-solid fa-trash" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </article>`).join('');
 
-    let html = '';
-    favs.forEach(food => {
-        html += `
-            <div class="food-card">
-                <img src="${food.image}" alt="${food.name}">
-                <div class="food-info">
-                    <h3>${food.name}</h3>
-                    <p class="food-cal">${food.calories} سعرة حرارية</p>
-                    <div style="display: flex; gap: 10px; margin-top: auto;">
-                        <a href="product.html?id=${food.id}" class="btn" style="flex: 1; text-align: center;">التفاصيل</a>
-                        <button class="btn btn-remove-fav" data-id="${food.id}" style="background-color: #e74c3c;"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
-    grid.innerHTML = html;
-
-    // Attach remove events
-    const removeBtns = document.querySelectorAll('.btn-remove-fav');
-    removeBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const id = e.currentTarget.getAttribute('data-id');
-            removeFavorite(id);
-        });
-    });
+  grid.querySelectorAll('.btn-remove-fav').forEach(button => {
+    button.addEventListener('click', () => removeFavorite(button.dataset.id));
+  });
 }
 
 function removeFavorite(id) {
-    let favs = JSON.parse(localStorage.getItem('favorites')) || [];
-    favs = favs.filter(f => f.id !== id);
-    localStorage.setItem('favorites', JSON.stringify(favs));
-    renderFavorites(); // Re-render
+  const favorites = getFavorites().filter(item => item.id !== id);
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+  renderFavorites();
 }
