@@ -1,0 +1,774 @@
+/* Base Variables */
+:root {
+  --primary-color: #27ae60;
+  --primary-dark: #219653;
+  --secondary-color: #f39c12;
+  --text-dark: #333333;
+  --text-light: #777777;
+  --bg-light: #f9f9f9;
+  --bg-white: #ffffff;
+  --border-color: #e0e0e0;
+  --font-family: 'Tajawal', sans-serif; /* Arabic Font */
+}
+
+/* General Reset & RTL Support */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  direction: rtl;
+  text-align: right;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+/* Header */
+.main-header {
+  background-color: var(--bg-white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-nav .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: var(--text-dark);
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--bg-white);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 100%;
+  right: 0;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: var(--text-dark);
+  padding: 12px 16px;
+  display: block;
+  border-bottom: 1px solid var(--bg-light);
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Search Box */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box form {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-light);
+  border-radius: 20px;
+  padding: 5px 15px;
+  border: 1px solid var(--border-color);
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  padding: 5px;
+  outline: none;
+  font-family: inherit;
+}
+
+.search-box button {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  color: var(--primary-color);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Footer */
+.main-footer {
+  background-color: var(--text-dark);
+  color: var(--bg-light);
+  padding: 3rem 0 0;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+  color: #cccccc;
+}
+
+.footer-section a:hover {
+  color: var(--primary-color);
+  padding-right: 5px; /* RTL shift */
+}
+
+.footer-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  margin: 1rem 0;
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: #444;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.newsletter h4 {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.newsletter form {
+  display: flex;
+  gap: 5px;
+}
+
+.newsletter input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #222;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Mobile menu implementation needed */
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .search-box {
+    display: none; /* Hide search on mobile by default, maybe show icon */
+  }
+}
+
+/* Static Pages Common */
+.page-container {
+    padding: 3rem 0;
+}
+
+.page-title {
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* About Page */
+.about-content, .privacy-content {
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.about-content h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.slogan {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.about-section {
+    margin-bottom: 1.5rem;
+}
+
+.about-section h3, .privacy-content h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Page */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.info-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.info-list i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Home Page */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1200x400?text=Food+Banner') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-search form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.hero-search input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: 1.1rem;
+    outline: none;
+    font-family: inherit;
+}
+
+.hero-search button {
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.hero-search button:hover {
+    background-color: var(--primary-dark);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.category-card {
+    background: var(--bg-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    margin: 15px 0 5px;
+    color: var(--primary-dark);
+}
+
+.category-card p {
+    padding: 0 15px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.category-count {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+/* Category Page */
+.category-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.category-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 10px;
+    background: var(--bg-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.badge {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.sort-controls select {
+    padding: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    margin-right: 10px;
+}
+
+.foods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.food-card {
+    background: var(--bg-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.food-info {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-info h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.food-cal {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.btn-block {
+    display: block;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Product Page */
+.breadcrumb {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+}
+
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.product-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.product-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.product-info h1 {
+    color: var(--primary-dark);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.product-desc {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-actions {
+    margin-bottom: 2rem;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.text-red {
+    color: #e74c3c;
+}
+.btn-outline:hover .text-red {
+    color: white; /* Make heart white on hover if filled */
+}
+
+/* Nutrition Table */
+.nutrition-table-container {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.nutrition-table-container h3 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.nutrition-table th, .nutrition-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: right;
+}
+
+.nutrition-table th {
+    font-weight: 600;
+    width: 60%;
+}
+
+.sub-row th {
+    padding-right: 30px;
+    font-weight: normal;
+    color: var(--text-light);
+}
+
+.vitamins-list {
+    margin-bottom: 1.5rem;
+    list-style-type: disc;
+    margin-right: 20px;
+}
+
+.vitamins-list span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.source-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Search Term Display */
+.search-term-display {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+.search-term-display strong {
+    color: var(--primary-dark);
+}
+
+/* Mobile Menu Active State */
+@media (max-width: 768px) {
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: var(--bg-white);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 1rem;
+        gap: 15px;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: var(--bg-light);
+        display: none; /* Hide by default in mobile */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block; /* Basic hover fallback for mobile if tapped */
+    }
+}
+
+/* Related Products */
+.related-products {
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.related-products h2 {
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+/* Ads Placeholders */
+.ad-container {
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.ad-banner {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 728px;
+    height: 90px;
+    background-color: #e0e0e0;
+    color: #888;
+    border: 1px dashed #aaa;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

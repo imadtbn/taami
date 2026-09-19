@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="دليلك الغذائي الشامل: اكتشف القيمة الغذائية لكل طبق. موقع يهتم بالصحة والتغذية.">
+    <title>تفاصيل المنتج - دليلك الغذائي الشامل</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- Header Content -->
+        <div class="container header-container">
+            <div class="logo"><a href="index.html"><i class="fa-solid fa-leaf"></i> دليلك الغذائي الشامل</a></div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">الفئات <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown-content" id="nav-categories"></div>
+                    </li>
+                    <li><a href="favorites.html">المفضلة</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <form action="search.html" method="GET">
+                        <input type="text" name="q" placeholder="ابحث..." required>
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container page-container" id="product-container">
+            <div class="loader">جاري التحميل...</div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Footer Content -->
+        <div class="container footer-container">
+            <div class="footer-section"><h3>روابط سريعة</h3><ul><li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="favorites.html">المفضلة</a></li></ul></div>
+            <div class="footer-section"><h3>الفئات الرئيسية</h3><ul id="footer-categories"></ul></div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <div class="footer-logo"><i class="fa-solid fa-leaf"></i> دليلك الغذائي الشامل</div>
+                <div class="social-links"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; <span id="current-year"></span> جميع الحقوق محفوظة.</p></div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

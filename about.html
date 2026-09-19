@@ -4,19 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="دليلك الغذائي الشامل: اكتشف القيمة الغذائية لكل طبق. موقع يهتم بالصحة والتغذية.">
-    <title>دليلك الغذائي الشامل</title>
-    <!-- Google Fonts for Arabic -->
+    <title>من نحن - دليلك الغذائي الشامل</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <!-- Header Section -->
     <header class="main-header">
         <div class="container header-container">
             <div class="logo">
@@ -24,22 +19,18 @@
                     <i class="fa-solid fa-leaf"></i> دليلك الغذائي الشامل
                 </a>
             </div>
-
             <nav class="main-nav">
                 <ul class="nav-links">
                     <li><a href="index.html">الرئيسية</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropbtn">الفئات <i class="fa-solid fa-caret-down"></i></a>
-                        <div class="dropdown-content" id="nav-categories">
-                            <!-- Categories will be loaded dynamically here -->
-                        </div>
+                        <div class="dropdown-content" id="nav-categories"></div>
                     </li>
                     <li><a href="favorites.html">المفضلة</a></li>
-                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="about.html" class="active">من نحن</a></li>
                     <li><a href="contact.html">اتصل بنا</a></li>
                 </ul>
             </nav>
-
             <div class="header-actions">
                 <div class="search-box">
                     <form action="search.html" method="GET">
@@ -47,42 +38,31 @@
                         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>
-                <div class="mobile-menu-toggle">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+                <div class="mobile-menu-toggle"><i class="fa-solid fa-bars"></i></div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="main-content" id="main-content">
-        <section class="hero">
-            <div class="container">
-                <h1>دليلك الغذائي الشامل</h1>
-                <p>اكتشف القيمة الغذائية لكل طبق... صحتك تبدأ بمعرفة ما تأكل</p>
-                <div class="hero-search">
-                    <form action="search.html" method="GET">
-                        <input type="text" name="q" placeholder="ابحث عن طعام، فئة، أو قيمة غذائية..." required>
-                        <button type="submit">ابحث</button>
-                    </form>
+    <main class="main-content">
+        <div class="container page-container">
+            <h1 class="page-title">من نحن</h1>
+            <div class="about-content">
+                <h2>دليلك الغذائي الشامل: اكتشف القيمة الغذائية لكل طبق</h2>
+                <p class="slogan">"صحتك تبدأ من مطبخك... بمعرفة ما تأكل"</p>
+
+                <div class="about-section">
+                    <h3>رؤيتنا</h3>
+                    <p>أن نكون الوجهة الأولى والموثوقة للمستخدمين الباحثين عن معلومات غذائية دقيقة ومفصلة حول مختلف أنواع الأطعمة، بهدف تمكينهم من اتخاذ خيارات غذائية صحية وواعية.</p>
+                </div>
+
+                <div class="about-section">
+                    <h3>جمهورنا المستهدف</h3>
+                    <p>الأفراد المهتمون بالصحة والتغذية، الرياضيون، أخصائيو التغذية، ربات البيوت، وأي شخص يسعى لفهم المكونات الغذائية لما يستهلكه.</p>
                 </div>
             </div>
-        </section>
-
-        <section class="categories-section container">
-            <h2 class="section-title">تصفح الفئات</h2>
-            <div class="categories-grid" id="home-categories-grid">
-                <!-- Categories will be loaded here dynamically -->
-            </div>
-        </section>
-
-        <!-- Ad Placeholder -->
-        <div class="container ad-container">
-            <div class="ad-banner">مساحة إعلانية</div>
         </div>
     </main>
 
-    <!-- Footer Section -->
     <footer class="main-footer">
         <div class="container footer-container">
             <div class="footer-section">
@@ -97,9 +77,7 @@
             </div>
             <div class="footer-section">
                 <h3>الفئات الرئيسية</h3>
-                <ul id="footer-categories">
-                    <!-- Categories will be loaded dynamically here -->
-                </ul>
+                <ul id="footer-categories"></ul>
             </div>
             <div class="footer-section">
                 <h3>تواصل معنا</h3>
@@ -112,21 +90,12 @@
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </div>
-                <div class="newsletter">
-                    <h4>اشترك في النشرة الإخبارية</h4>
-                    <form>
-                        <input type="email" placeholder="بريدك الإلكتروني" required>
-                        <button type="submit" class="btn">اشترك</button>
-                    </form>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; <span id="current-year"></span> دليلك الغذائي الشامل. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
-
-    <!-- Main JS -->
     <script src="js/main.js"></script>
 </body>
 </html>
