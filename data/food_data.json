@@ -35,6 +35,18 @@
       "name": "الفواكه",
       "description": "طاقة طبيعية وفيتامينات.",
       "image": "https://placehold.co/400x300?text=Fruits"
+    },
+    {
+      "id": "nuts-seeds",
+      "name": "المكسرات والبذور",
+      "description": "مصادر غنية بالدهون الصحية، الألياف، والبروتين النباتي.",
+      "image": "https://placehold.co/400x300?text=Nuts+And+Seeds"
+    },
+    {
+      "id": "dairy",
+      "name": "منتجات الألبان",
+      "description": "مصادر ممتازة للكالسيوم، فيتامين د، والبروتين لصحة العظام.",
+      "image": "https://placehold.co/400x300?text=Dairy"
     }
   ],
   "foods": [
@@ -375,6 +387,153 @@
       }
     },
     {
+      "id": "goat-meat",
+      "categoryId": "red-meat",
+      "name": "لحم ماعز مطبوخ",
+      "description": "لحم أحمر بديل صحي يتميز بانخفاض الدهون المشبعة ومحتوى عالي من الحديد والبروتين.",
+      "image": "https://placehold.co/600x400?text=Goat+Meat",
+      "nutrition": {
+        "calories": 143,
+        "protein": 27,
+        "carbs": 0,
+        "totalFat": 3,
+        "saturatedFat": 0.9,
+        "unsaturatedFat": 2,
+        "fiber": 0,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "الحديد", "dv": "15%"},
+          {"name": "الزنك", "dv": "30%"}
+        ]
+      }
+    },
+    {
+      "id": "duck-breast",
+      "categoryId": "white-meat",
+      "name": "صدر بط (بدون جلد)",
+      "description": "لحم دواجن غني بالنكهة، يوفر بروتيناً عالياً ومجموعة من فيتامينات B عند نزع الجلد.",
+      "image": "https://placehold.co/600x400?text=Duck+Breast",
+      "nutrition": {
+        "calories": 140,
+        "protein": 19,
+        "carbs": 0,
+        "totalFat": 7,
+        "saturatedFat": 2.3,
+        "unsaturatedFat": 4,
+        "fiber": 0,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "الحديد", "dv": "25%"},
+          {"name": "فيتامين B5", "dv": "15%"}
+        ]
+      }
+    },
+    {
+      "id": "shrimp",
+      "categoryId": "seafood",
+      "name": "جمبري مسلوق",
+      "description": "مأكولات بحرية منخفضة السعرات الحرارية جداً ومحملة بالبروتين الصافي واليود.",
+      "image": "https://placehold.co/600x400?text=Shrimp",
+      "nutrition": {
+        "calories": 99,
+        "protein": 24,
+        "carbs": 0.2,
+        "totalFat": 0.3,
+        "saturatedFat": 0.1,
+        "unsaturatedFat": 0.2,
+        "fiber": 0,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "السيلينيوم", "dv": "48%"},
+          {"name": "فيتامين B12", "dv": "21%"}
+        ]
+      }
+    },
+    {
+      "id": "green-peas",
+      "categoryId": "legumes",
+      "name": "بازلاء خضراء مسلوقة",
+      "description": "بقوليات حلوة المذاق، مليئة بالألياف ومضادات الأكسدة التي تدعم صحة الجهاز الهضمي.",
+      "image": "https://placehold.co/600x400?text=Green+Peas",
+      "nutrition": {
+        "calories": 84,
+        "protein": 5.4,
+        "carbs": 15.6,
+        "totalFat": 0.2,
+        "saturatedFat": 0,
+        "unsaturatedFat": 0,
+        "fiber": 5.5,
+        "sugar": 5.9,
+        "vitamins": [
+          {"name": "فيتامين C", "dv": "24%"},
+          {"name": "فيتامين K", "dv": "30%"}
+        ]
+      }
+    },
+    {
+      "id": "carrot",
+      "categoryId": "vegetables",
+      "name": "جزر طازج",
+      "description": "خضروات جذرية مقرمشة، تعتبر من أفضل المصادر الطبيعية للبيتا كاروتين المفيد للنظر.",
+      "image": "https://placehold.co/600x400?text=Carrot",
+      "nutrition": {
+        "calories": 41,
+        "protein": 0.9,
+        "carbs": 9.6,
+        "totalFat": 0.2,
+        "saturatedFat": 0,
+        "unsaturatedFat": 0,
+        "fiber": 2.8,
+        "sugar": 4.7,
+        "vitamins": [
+          {"name": "فيتامين A", "dv": "334%"},
+          {"name": "فيتامين K", "dv": "16%"}
+        ]
+      }
+    },
+    {
+      "id": "red-bell-pepper",
+      "categoryId": "vegetables",
+      "name": "فلفل أحمر حلو",
+      "description": "يحتوي على نسبة استثنائية من فيتامين سي تفوق الحمضيات، مع سعرات حرارية منخفضة.",
+      "image": "https://placehold.co/600x400?text=Red+Bell+Pepper",
+      "nutrition": {
+        "calories": 31,
+        "protein": 1,
+        "carbs": 6,
+        "totalFat": 0.3,
+        "saturatedFat": 0,
+        "unsaturatedFat": 0,
+        "fiber": 2.1,
+        "sugar": 4.2,
+        "vitamins": [
+          {"name": "فيتامين C", "dv": "213%"},
+          {"name": "فيتامين A", "dv": "63%"}
+        ]
+      }
+    },
+    {
+      "id": "strawberry",
+      "categoryId": "fruits",
+      "name": "فراولة طازجة",
+      "description": "فاكهة غنية بمضادات الأكسدة وفيتامين سي، وتتميز بمؤشر جلايسيمي منخفض.",
+      "image": "https://placehold.co/600x400?text=Strawberry",
+      "nutrition": {
+        "calories": 32,
+        "protein": 0.7,
+        "carbs": 7.7,
+        "totalFat": 0.3,
+        "saturatedFat": 0,
+        "unsaturatedFat": 0,
+        "fiber": 2,
+        "sugar": 4.9,
+        "vitamins": [
+          {"name": "فيتامين C", "dv": "98%"},
+          {"name": "المنغنيز", "dv": "19%"}
+        ]
+      }
+    },
+    {
       "id": "veal-lean",
       "categoryId": "red-meat",
       "name": "لحم عجل قليل الدهن",
@@ -413,6 +572,132 @@
         "vitamins": [
           {"name": "فيتامين C", "dv": "89%"},
           {"name": "الثيامين", "dv": "8%"}
+        ]
+      }
+    },
+    {
+      "id": "almonds",
+      "categoryId": "nuts-seeds",
+      "name": "لوز نيء",
+      "description": "مكسرات غنية بفيتامين E والدهون الأحادية غير المشبعة التي تدعم صحة القلب.",
+      "image": "https://placehold.co/600x400?text=Almonds",
+      "nutrition": {
+        "calories": 579,
+        "protein": 21.1,
+        "carbs": 21.6,
+        "totalFat": 49.9,
+        "saturatedFat": 3.8,
+        "unsaturatedFat": 44,
+        "fiber": 12.5,
+        "sugar": 4.4,
+        "vitamins": [
+          {"name": "فيتامين E", "dv": "170%"},
+          {"name": "المغنيسيوم", "dv": "67%"}
+        ]
+      }
+    },
+    {
+      "id": "walnuts",
+      "categoryId": "nuts-seeds",
+      "name": "جوز (عين الجمل)",
+      "description": "يتميز باحتوائه على نسبة عالية من أحماض أوميغا 3 النباتية المفيدة للدماغ.",
+      "image": "https://placehold.co/600x400?text=Walnuts",
+      "nutrition": {
+        "calories": 654,
+        "protein": 15.2,
+        "carbs": 13.7,
+        "totalFat": 65.2,
+        "saturatedFat": 6.1,
+        "unsaturatedFat": 54,
+        "fiber": 6.7,
+        "sugar": 2.6,
+        "vitamins": [
+          {"name": "النحاس", "dv": "79%"},
+          {"name": "المنغنيز", "dv": "170%"}
+        ]
+      }
+    },
+    {
+      "id": "chia-seeds",
+      "categoryId": "nuts-seeds",
+      "name": "بذور الشيا",
+      "description": "بذور صغيرة مليئة بالألياف القابلة للذوبان ومضادات الأكسدة، ممتازة لتعزيز الشبع.",
+      "image": "https://placehold.co/600x400?text=Chia+Seeds",
+      "nutrition": {
+        "calories": 486,
+        "protein": 16.5,
+        "carbs": 42.1,
+        "totalFat": 30.7,
+        "saturatedFat": 3.3,
+        "unsaturatedFat": 25,
+        "fiber": 34.4,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "الكالسيوم", "dv": "63%"},
+          {"name": "الحديد", "dv": "42%"}
+        ]
+      }
+    },
+    {
+      "id": "greek-yogurt",
+      "categoryId": "dairy",
+      "name": "زبادي يوناني (كامل الدسم)",
+      "description": "يحتوي على ضعف كمية البروتين الموجودة في الزبادي العادي، غني بالبروبيوتيك لصحة الأمعاء.",
+      "image": "https://placehold.co/600x400?text=Greek+Yogurt",
+      "nutrition": {
+        "calories": 97,
+        "protein": 9,
+        "carbs": 3.9,
+        "totalFat": 5,
+        "saturatedFat": 3.1,
+        "unsaturatedFat": 1.5,
+        "fiber": 0,
+        "sugar": 3.2,
+        "vitamins": [
+          {"name": "الكالسيوم", "dv": "10%"},
+          {"name": "فيتامين B12", "dv": "31%"}
+        ]
+      }
+    },
+    {
+      "id": "whole-milk",
+      "categoryId": "dairy",
+      "name": "حليب بقري كامل الدسم",
+      "description": "مصدر أساسي للكالسيوم وفيتامين د، يساهم في بناء العظام والأسنان.",
+      "image": "https://placehold.co/600x400?text=Whole+Milk",
+      "nutrition": {
+        "calories": 61,
+        "protein": 3.2,
+        "carbs": 4.8,
+        "totalFat": 3.3,
+        "saturatedFat": 1.9,
+        "unsaturatedFat": 1.1,
+        "fiber": 0,
+        "sugar": 5.1,
+        "vitamins": [
+          {"name": "الكالسيوم", "dv": "12%"},
+          {"name": "فيتامين D", "dv": "15%"}
+        ]
+      }
+    },
+    {
+      "id": "cheddar-cheese",
+      "categoryId": "dairy",
+      "name": "جبن شيدر",
+      "description": "جبن صلب غني بنكهته ومحتواه العالي من البروتين والدهون، يستهلك باعتدال.",
+      "image": "https://placehold.co/600x400?text=Cheddar+Cheese",
+      "nutrition": {
+        "calories": 402,
+        "protein": 25,
+        "carbs": 1.3,
+        "totalFat": 33.1,
+        "saturatedFat": 21.1,
+        "unsaturatedFat": 9.4,
+        "fiber": 0,
+        "sugar": 0.5,
+        "vitamins": [
+          {"name": "الكالسيوم", "dv": "72%"},
+          {"name": "فيتامين A", "dv": "20%"}
         ]
       }
     }
