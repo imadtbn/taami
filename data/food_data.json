@@ -4,55 +4,55 @@
       "id": "red-meat",
       "name": "اللحوم الحمراء",
       "description": "مصادر ممتازة للبروتين والحديد.",
-      "image": "https://placehold.co/400x300?text=Red+Meat"
+      "image": "images/red-meat.jpg"
     },
     {
       "id": "white-meat",
       "name": "اللحوم البيضاء",
       "description": "بروتين خفيف وقليل الدهون.",
-      "image": "https://placehold.co/400x300?text=White+Meat"
+      "image": "images/white-meat.jpg"
     },
     {
       "id": "seafood",
       "name": "الأسماك والمأكولات البحرية",
       "description": "غنية بالأوميغا 3 والبروتين.",
-      "image": "https://placehold.co/400x300?text=Seafood"
+      "image": "images/seafood.jpg"
     },
     {
       "id": "legumes",
       "name": "البقوليات",
       "description": "مصدر نباتي رائع للبروتين والألياف.",
-      "image": "https://placehold.co/400x300?text=Legumes"
+      "image": "images/legumes.jpg"
     },
     {
       "id": "vegetables",
       "name": "الخضراوات",
       "description": "مليئة بالفيتامينات والمعادن.",
-      "image": "https://placehold.co/400x300?text=Vegetables"
+      "image": "images/vegetables.jpg"
     },
     {
       "id": "fruits",
       "name": "الفواكه",
       "description": "طاقة طبيعية وفيتامينات.",
-      "image": "https://placehold.co/400x300?text=Fruits"
+      "image": "images/fruits.jpg"
     },
     {
       "id": "nuts-seeds",
       "name": "المكسرات والبذور",
       "description": "مصادر غنية بالدهون الصحية، الألياف، والبروتين النباتي.",
-      "image": "https://placehold.co/400x300?text=Nuts+And+Seeds"
+      "image": "images/nuts-seeds.jpg"
     },
     {
       "id": "dairy",
       "name": "منتجات الألبان",
       "description": "مصادر ممتازة للكالسيوم، فيتامين د، والبروتين لصحة العظام.",
-      "image": "https://placehold.co/400x300?text=Dairy"
+      "image": "images/Dairy.jpg"
     },
     {
       "id": "whole-grains",
       "name": "الحبوب الكاملة",
       "description": "مصادر غنية بالكربوهيدرات المعقدة، الألياف، وفيتامينات B لطاقة مستدامة.",
-      "image": "https://placehold.co/400x300?text=Whole+Grains"
+      "image": "images/whole-grains.jpg"
     }
   ],
   "foods": [
@@ -61,7 +61,7 @@
       "categoryId": "red-meat",
       "name": "لحم بقري قليل الدهن",
       "description": "لحم بقري مطبوخ، خالي من الدهون المرئية، مصدر غني للبروتين والحديد.",
-      "image": "https://placehold.co/600x400?text=Lean+Beef",
+      "image": "images/Lean+Beef.jpg",
       "nutrition": {
         "calories": 250,
         "protein": 26,
@@ -88,7 +88,7 @@
       "categoryId": "white-meat",
       "name": "صدر دجاج (بدون جلد)",
       "description": "صدر دجاج مشوي بدون جلد، خيار مثالي لبناء العضلات وخسارة الوزن.",
-      "image": "https://placehold.co/600x400?text=Chicken+Breast",
+      "image": "images/Chicken+Breast.jpg",
       "nutrition": {
         "calories": 165,
         "protein": 31,
@@ -115,7 +115,7 @@
       "categoryId": "seafood",
       "name": "سلمون مشوي",
       "description": "سمك سلمون غني بأحماض أوميغا 3 الدهنية الصحية للقلب.",
-      "image": "https://placehold.co/600x400?text=Salmon",
+      "image": "images/Salmon.jpg",
       "nutrition": {
         "calories": 206,
         "protein": 22,
@@ -142,7 +142,7 @@
       "categoryId": "legumes",
       "name": "عدس مطبوخ",
       "description": "مصدر ممتاز للبروتين النباتي والألياف الغذائية التي تساعد على الهضم.",
-      "image": "https://placehold.co/600x400?text=Lentils",
+      "image": "images/Lentils.jpg",
       "nutrition": {
         "calories": 116,
         "protein": 9,
@@ -169,7 +169,7 @@
       "categoryId": "vegetables",
       "name": "سبانخ طازجة",
       "description": "خضار ورقية غنية بالحديد ومضادات الأكسدة.",
-      "image": "https://placehold.co/600x400?text=Spinach",
+      "image": "images/Spinach.jpg",
       "nutrition": {
         "calories": 23,
         "protein": 2.9,
@@ -196,7 +196,7 @@
       "categoryId": "fruits",
       "name": "تفاح طازج",
       "description": "وجبة خفيفة صحية غنية بالألياف وفيتامين سي.",
-      "image": "https://placehold.co/600x400?text=Apple",
+      "image": "himages/Apple.jpg",
       "nutrition": {
         "calories": 52,
         "protein": 0.3,
@@ -358,7 +358,7 @@
       "categoryId": "fruits",
       "name": "موز",
       "description": "فاكهة استوائية تمد الجسم بطاقة سريعة ومثالية قبل أداء التمارين الرياضية.",
-      "image": "https://placehold.co/600x400?text=Banana",
+      "image": "images/banane.png",
       "nutrition": {
         "calories": 89,
         "protein": 1.1,
