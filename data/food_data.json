@@ -289,6 +289,384 @@
           {"name": "فيتامين B6", "dv": "20%"}
         ]
       }
+    },
+    {
+      "id": "beef-lean",
+      "categoryId": "red-meat",
+      "name": "لحم بقري قليل الدهن",
+      "description": "لحم بقري مطبوخ، خالي من الدهون المرئية، مصدر غني للبروتين والحديد.",
+      "image": "https://placehold.co/600x400?text=Lean+Beef",
+      "nutrition": {
+        "calories": 250,
+        "protein": 26,
+        "carbs": 0,
+        "totalFat": 15,
+        "saturatedFat": 6,
+        "unsaturatedFat": 9,
+        "fiber": 0,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "الحديد", "dv": "15%"},
+          {"name": "فيتامين B12", "dv": "45%"}
+        ]
+      }
+    },
+    {
+      "id": "chicken-breast",
+      "categoryId": "white-meat",
+      "name": "صدر دجاج (بدون جلد)",
+      "description": "صدر دجاج مشوي بدون جلد، خيار مثالي لبناء العضلات وخسارة الوزن.",
+      "image": "https://placehold.co/600x400?text=Chicken+Breast",
+      "nutrition": {
+        "calories": 165,
+        "protein": 31,
+        "carbs": 0,
+        "totalFat": 3.6,
+        "saturatedFat": 1,
+        "unsaturatedFat": 2.6,
+        "fiber": 0,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "فيتامين B6", "dv": "30%"},
+          {"name": "النياسين", "dv": "60%"}
+        ]
+      }
+    },
+    {
+      "id": "salmon",
+      "categoryId": "seafood",
+      "name": "سلمون مشوي",
+      "description": "سمك سلمون غني بأحماض أوميغا 3 الدهنية الصحية للقلب.",
+      "image": "https://placehold.co/600x400?text=Salmon",
+      "nutrition": {
+        "calories": 206,
+        "protein": 22,
+        "carbs": 0,
+        "totalFat": 13,
+        "saturatedFat": 3,
+        "unsaturatedFat": 10,
+        "fiber": 0,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "فيتامين D", "dv": "66%"},
+          {"name": "أوميغا 3", "dv": "High"}
+        ]
+      }
+    },
+    {
+      "id": "lentils",
+      "categoryId": "legumes",
+      "name": "عدس مطبوخ",
+      "description": "مصدر ممتاز للبروتين النباتي والألياف الغذائية التي تساعد على الهضم.",
+      "image": "https://placehold.co/600x400?text=Lentils",
+      "nutrition": {
+        "calories": 116,
+        "protein": 9,
+        "carbs": 20,
+        "totalFat": 0.4,
+        "saturatedFat": 0.1,
+        "unsaturatedFat": 0.3,
+        "fiber": 8,
+        "sugar": 1.8,
+        "vitamins": [
+          {"name": "حمض الفوليك", "dv": "45%"},
+          {"name": "الحديد", "dv": "18%"}
+        ]
+      }
+    },
+    {
+      "id": "spinach",
+      "categoryId": "vegetables",
+      "name": "سبانخ طازجة",
+      "description": "خضار ورقية غنية بالحديد ومضادات الأكسدة.",
+      "image": "https://placehold.co/600x400?text=Spinach",
+      "nutrition": {
+        "calories": 23,
+        "protein": 2.9,
+        "carbs": 3.6,
+        "totalFat": 0.4,
+        "saturatedFat": 0,
+        "unsaturatedFat": 0,
+        "fiber": 2.2,
+        "sugar": 0.4,
+        "vitamins": [
+          {"name": "فيتامين K", "dv": "604%"},
+          {"name": "فيتامين A", "dv": "188%"}
+        ]
+      }
+    },
+    {
+      "id": "apple",
+      "categoryId": "fruits",
+      "name": "تفاح طازج",
+      "description": "وجبة خفيفة صحية غنية بالألياف وفيتامين سي.",
+      "image": "https://placehold.co/600x400?text=Apple",
+      "nutrition": {
+        "calories": 52,
+        "protein": 0.3,
+        "carbs": 14,
+        "totalFat": 0.2,
+        "saturatedFat": 0,
+        "unsaturatedFat": 0,
+        "fiber": 2.4,
+        "sugar": 10,
+        "vitamins": [
+          {"name": "فيتامين C", "dv": "14%"},
+          {"name": "البوتاسيوم", "dv": "3%"}
+        ]
+      }
+    },
+    {
+      "id": "lamb-lean",
+      "categoryId": "red-meat",
+      "name": "لحم خروف قليل الدهن",
+      "description": "لحم غنم مطبوخ، غني بالبروتينات والزنك المفيد للمناعة.",
+      "image": "https://placehold.co/600x400?text=Lean+Lamb",
+      "nutrition": {
+        "calories": 258,
+        "protein": 25,
+        "carbs": 0,
+        "totalFat": 16,
+        "saturatedFat": 6,
+        "unsaturatedFat": 8,
+        "fiber": 0,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "الزنك", "dv": "32%"},
+          {"name": "فيتامين B12", "dv": "43%"}
+        ]
+      }
+    },
+    {
+      "id": "turkey-breast",
+      "categoryId": "white-meat",
+      "name": "صدر ديك رومي",
+      "description": "لحم أبيض مشوي منخفض جداً بالدهون والسعرات، مثالي للحميات الغذائية.",
+      "image": "https://placehold.co/600x400?text=Turkey+Breast",
+      "nutrition": {
+        "calories": 135,
+        "protein": 30,
+        "carbs": 0,
+        "totalFat": 1.5,
+        "saturatedFat": 0.4,
+        "unsaturatedFat": 0.5,
+        "fiber": 0,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "السيلينيوم", "dv": "45%"},
+          {"name": "فيتامين B6", "dv": "25%"}
+        ]
+      }
+    },
+    {
+      "id": "tuna-light",
+      "categoryId": "seafood",
+      "name": "تونة خفيفة (معلبة بالماء)",
+      "description": "سمك تونة محفوظ بالماء، سريع التحضير ومصدر هائل للبروتين الصافي.",
+      "image": "https://placehold.co/600x400?text=Light+Tuna",
+      "nutrition": {
+        "calories": 116,
+        "protein": 25,
+        "carbs": 0,
+        "totalFat": 1,
+        "saturatedFat": 0.2,
+        "unsaturatedFat": 0.3,
+        "fiber": 0,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "فيتامين B12", "dv": "125%"},
+          {"name": "النياسين", "dv": "65%"}
+        ]
+      }
+    },
+    {
+      "id": "chickpeas",
+      "categoryId": "legumes",
+      "name": "حمص مسلوق",
+      "description": "حبوب غنية بالكربوهيدرات المعقدة والألياف، تمنح شعوراً طويلاً بالشبع.",
+      "image": "https://placehold.co/600x400?text=Chickpeas",
+      "nutrition": {
+        "calories": 164,
+        "protein": 8.9,
+        "carbs": 27.4,
+        "totalFat": 2.6,
+        "saturatedFat": 0.3,
+        "unsaturatedFat": 1,
+        "fiber": 7.6,
+        "sugar": 4.8,
+        "vitamins": [
+          {"name": "حمض الفوليك", "dv": "43%"},
+          {"name": "الحديد", "dv": "16%"}
+        ]
+      }
+    },
+    {
+      "id": "broccoli",
+      "categoryId": "vegetables",
+      "name": "بروكلي",
+      "description": "من الخضروات الصليبية الغنية بمضادات الأكسدة وفيتامين سي.",
+      "image": "https://placehold.co/600x400?text=Broccoli",
+      "nutrition": {
+        "calories": 34,
+        "protein": 2.8,
+        "carbs": 6.6,
+        "totalFat": 0.4,
+        "saturatedFat": 0.1,
+        "unsaturatedFat": 0.1,
+        "fiber": 2.6,
+        "sugar": 1.7,
+        "vitamins": [
+          {"name": "فيتامين C", "dv": "149%"},
+          {"name": "فيتامين K", "dv": "127%"}
+        ]
+      }
+    },
+    {
+      "id": "banana",
+      "categoryId": "fruits",
+      "name": "موز",
+      "description": "فاكهة استوائية تمد الجسم بطاقة سريعة ومثالية قبل أداء التمارين الرياضية.",
+      "image": "https://placehold.co/600x400?text=Banana",
+      "nutrition": {
+        "calories": 89,
+        "protein": 1.1,
+        "carbs": 22.8,
+        "totalFat": 0.3,
+        "saturatedFat": 0.1,
+        "unsaturatedFat": 0.1,
+        "fiber": 2.6,
+        "sugar": 12.2,
+        "vitamins": [
+          {"name": "البوتاسيوم", "dv": "10%"},
+          {"name": "فيتامين B6", "dv": "20%"}
+        ]
+      }
+    },
+    {
+      "id": "sweet-potato",
+      "categoryId": "vegetables",
+      "name": "بطاطا حلوة مطبوخة",
+      "description": "مصدر ممتاز للكربوهيدرات المعقدة وفيتامين أ، تدعم صحة البصر والمناعة.",
+      "image": "https://placehold.co/600x400?text=Sweet+Potato",
+      "nutrition": {
+        "calories": 86,
+        "protein": 1.6,
+        "carbs": 20.1,
+        "totalFat": 0.1,
+        "saturatedFat": 0,
+        "unsaturatedFat": 0.1,
+        "fiber": 3,
+        "sugar": 4.2,
+        "vitamins": [
+          {"name": "فيتامين A", "dv": "283%"},
+          {"name": "فيتامين C", "dv": "4%"}
+        ]
+      }
+    },
+    {
+      "id": "avocado",
+      "categoryId": "fruits",
+      "name": "أفوكادو",
+      "description": "فاكهة غنية بالدهون الأحادية غير المشبعة الصحية للقلب والألياف.",
+      "image": "https://placehold.co/600x400?text=Avocado",
+      "nutrition": {
+        "calories": 160,
+        "protein": 2,
+        "carbs": 8.5,
+        "totalFat": 14.7,
+        "saturatedFat": 2.1,
+        "unsaturatedFat": 12.6,
+        "fiber": 6.7,
+        "sugar": 0.7,
+        "vitamins": [
+          {"name": "فيتامين K", "dv": "26%"},
+          {"name": "حمض الفوليك", "dv": "20%"}
+        ]
+      }
+    },
+    {
+      "id": "black-beans",
+      "categoryId": "legumes",
+      "name": "فاصوليا سوداء مطبوخة",
+      "description": "بقوليات غنية بالبروتين والألياف ومضادات الأكسدة القوية.",
+      "image": "https://placehold.co/600x400?text=Black+Beans",
+      "nutrition": {
+        "calories": 132,
+        "protein": 8.9,
+        "carbs": 23.7,
+        "totalFat": 0.5,
+        "saturatedFat": 0.1,
+        "unsaturatedFat": 0.4,
+        "fiber": 8.7,
+        "sugar": 0.3,
+        "vitamins": [
+          {"name": "الحديد", "dv": "12%"},
+          {"name": "المغنيسيوم", "dv": "17%"}
+        ]
+      }
+    },
+    {
+      "id": "sardines",
+      "categoryId": "seafood",
+      "name": "سردين معلب",
+      "description": "أسماك صغيرة غنية بالكالسيوم وأحماض أوميغا 3 وفيتامين د.",
+      "image": "https://placehold.co/600x400?text=Sardines",
+      "nutrition": {
+        "calories": 208,
+        "protein": 24.6,
+        "carbs": 0,
+        "totalFat": 11.5,
+        "saturatedFat": 1.5,
+        "unsaturatedFat": 10,
+        "fiber": 0,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "فيتامين D", "dv": "48%"},
+          {"name": "الكالسيوم", "dv": "38%"}
+        ]
+      }
+    },
+    {
+      "id": "veal-lean",
+      "categoryId": "red-meat",
+      "name": "لحم عجل قليل الدهن",
+      "description": "لحم طري يحتوي على نسبة عالية من البروتين الصافي ومعادن أساسية.",
+      "image": "https://placehold.co/600x400?text=Lean+Veal",
+      "nutrition": {
+        "calories": 172,
+        "protein": 24,
+        "carbs": 0,
+        "totalFat": 8,
+        "saturatedFat": 3.2,
+        "unsaturatedFat": 4.8,
+        "fiber": 0,
+        "sugar": 0,
+        "vitamins": [
+          {"name": "فيتامين B3 (نياسين)", "dv": "40%"},
+          {"name": "الزنك", "dv": "25%"}
+        ]
+      }
+    },
+    {
+      "id": "orange",
+      "categoryId": "fruits",
+      "name": "برتقال طازج",
+      "description": "فاكهة حمضية شهيرة بمحتواها العالي من فيتامين سي المعزز للمناعة.",
+      "image": "https://placehold.co/600x400?text=Orange",
+      "nutrition": {
+        "calories": 47,
+        "protein": 0.9,
+        "carbs": 11.8,
+        "totalFat": 0.1,
+        "saturatedFat": 0,
+        "unsaturatedFat": 0,
+        "fiber": 2.4,
+        "sugar": 9.3,
+        "vitamins": [
+          {"name": "فيتامين C", "dv": "89%"},
+          {"name": "الثيامين", "dv": "8%"}
+        ]
+      }
     }
   ]
 }
