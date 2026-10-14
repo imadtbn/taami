@@ -116,9 +116,10 @@ function populateCategories() {
     return `<a href="category.html?id=${encodeURIComponent(cat.id)}"><span class="nav-icon" aria-hidden="true"><i class="fa-solid ${icon}"></i></span><span class="nav-label">${cat.name}</span></a>`;
   }).join('');
 
-  const footerHTML = appData.categories.map(cat =>
-    `<li><a href="category.html?id=${encodeURIComponent(cat.id)}">${cat.name}</a></li>`
-  ).join('');
+  const footerHTML = appData.categories.map(cat => {
+    const icon = categoryIcons[cat.id] || 'fa-utensils';
+    return `<li><a class="footer-link" href="category.html?id=${encodeURIComponent(cat.id)}"><span class="footer-link-icon" aria-hidden="true"><i class="fa-solid ${icon}"></i></span><span class="footer-link-label">${cat.name}</span></a></li>`;
+  }).join('');
 
   if (navCategories) navCategories.innerHTML = navHTML;
   if (footerCategories) footerCategories.innerHTML = footerHTML;

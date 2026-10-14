@@ -244,16 +244,35 @@ ul { list-style: none; }
 .ad-container { margin-block: 2.5rem; text-align: center; }
 .ad-banner { width: min(100%, 728px); min-height: 90px; display: inline-flex; align-items: center; justify-content: center; border: 1px dashed #c7cec9; border-radius: var(--radius-md); background: #eef1ef; color: #7b8580; }
 
-.main-footer { margin-top: 3rem; padding-top: 3rem; background: var(--color-footer); color: #d9e2dd; }
-.footer-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; padding-bottom: 2rem; }
-.footer-section h3 { color: #7bd8a4; margin-bottom: 1rem; }
-.footer-section li { margin-bottom: .55rem; }
-.footer-section a { color: #c7d1cb; }
-.footer-section a:hover { color: #fff; }
-.footer-logo { color: #7bd8a4; font-size: 1.1rem; font-weight: 800; margin-bottom: .7rem; }
+/* Footer: semantic icon links, shared visual language with the main navigation. */
+.main-footer { margin-top: 3rem; padding-top: 3rem; border-top: 3px solid var(--color-primary); background: var(--color-footer); color: #d9e2dd; }
+.footer-container { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 2.5rem); padding-bottom: 2rem; align-items: start; }
+.footer-section { min-width: 0; }
+.footer-section h3 { color: #7bd8a4; margin-bottom: .9rem; padding-bottom: .55rem; border-bottom: 1px solid rgba(255,255,255,.12); }
+.footer-link-list { display: grid; gap: .15rem; }
+.footer-section .footer-link-list li { min-width: 0; margin: 0; }
+.footer-section .footer-link-list a {
+  display: flex; align-items: center; gap: .65rem; min-height: 44px; padding: .35rem .5rem;
+  border-radius: .75rem; color: #d9e2dd; line-height: 1.4;
+  transition: background-color .2s ease, color .2s ease;
+}
+.footer-section .footer-link-list a:hover,
+.footer-section .footer-link-list a:focus-visible { color: #fff; background: rgba(123,216,164,.12); }
+.footer-section .footer-link-list a:focus-visible { outline: 2px solid #a5eec5; outline-offset: 2px; }
+.footer-link-icon {
+  flex: 0 0 2.1rem; width: 2.1rem; height: 2.1rem; display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(123,216,164,.2); border-radius: .65rem;
+  background: rgba(123,216,164,.1); color: #7bd8a4; font-size: .95rem;
+  transition: background-color .2s ease, color .2s ease;
+}
+.footer-section .footer-link-list a:hover .footer-link-icon,
+.footer-section .footer-link-list a:focus-visible .footer-link-icon { background: var(--color-primary); color: #fff; }
+.footer-link-label { min-width: 0; overflow-wrap: anywhere; }
+.footer-logo { display: flex; align-items: center; gap: .55rem; color: #7bd8a4; font-size: 1.1rem; font-weight: 800; margin-bottom: .7rem; }
+.footer-section p { max-width: 42ch; line-height: 1.85; }
 .social-links { display: flex; gap: .6rem; margin-top: 1rem; }
 .social-links a { width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,.08); }
-.footer-bottom { padding: 1rem; text-align: center; border-top: 1px solid rgba(255,255,255,.08); color: #9eaaa3; }
+.footer-bottom { padding: 1rem; text-align: center; border-top: 1px solid rgba(255,255,255,.12); color: #b2c0b7; }
 
 @media (max-width: 1120px) {
   .search-box { display: none; }
@@ -293,7 +312,8 @@ ul { list-style: none; }
   .mobile-search input { flex: 1; min-width: 0; border: 0; padding: .75rem; outline: 0; }
   .mobile-search button { width: 46px; border: 0; background: var(--color-primary); color: #fff; }
   .product-details, .contact-wrapper { grid-template-columns: 1fr; }
-  .footer-container { grid-template-columns: repeat(2, 1fr); }
+  .footer-container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-section:last-child { grid-column: 1 / -1; }
 }
 
 @media (max-width: 600px) {
@@ -309,8 +329,15 @@ ul { list-style: none; }
   .sort-controls select { min-width: 0; flex: 1; }
   .nutrition-summary { grid-template-columns: repeat(2, 1fr); }
   .feature-strip, .footer-container { grid-template-columns: 1fr; }
+  .footer-section:last-child { grid-column: auto; }
+  .footer-category-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: .35rem; }
+  .footer-category-list .footer-link-icon { flex-basis: 1.9rem; width: 1.9rem; height: 1.9rem; }
   .page-container { padding-block: 1.75rem; }
   .about-content, .privacy-content, .contact-info, .contact-form, .product-details { border-radius: 1rem; }
+}
+
+@media (max-width: 420px) {
+  .footer-category-list { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 360px) {
