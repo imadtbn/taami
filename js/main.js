@@ -15,26 +15,37 @@ function setCurrentYear() {
 function initNavigation() {
   const toggle = document.querySelector('.mobile-menu-toggle');
   const nav = document.getElementById('mainNav');
-  const dropdown = document.querySelector('.dropdown');
-  const dropbtn = document.querySelector('.dropbtn');
+  const dropdown = nav?.querySelector('.dropdown');
+  const dropbtn = dropdown?.querySelector('.dropbtn');
+
+  const closeCategories = () => {
+    if (!dropdown || !dropbtn) return;
+    dropdown.classList.remove('open');
+    dropbtn.setAttribute('aria-expanded', 'false');
+  };
+
+  const closeMenu = () => {
+    if (!toggle || !nav) return;
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'فتح القائمة');
+    const icon = toggle.querySelector('i');
+    if (icon) icon.className = 'fa-solid fa-bars';
+    closeCategories();
+  };
 
   if (toggle && nav) {
-    const closeMenu = () => {
-      nav.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      const icon = toggle.querySelector('i');
-      if (icon) icon.className = 'fa-solid fa-bars';
-    };
-
     toggle.addEventListener('click', () => {
       const open = nav.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
       const icon = toggle.querySelector('i');
       if (icon) icon.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+      if (!open) closeCategories();
     });
 
     nav.addEventListener('click', e => {
-      if (e.target.closest('a') && !e.target.closest('.dropdown-content')) closeMenu();
+      if (e.target.closest('a')) closeMenu();
     });
 
     document.addEventListener('click', e => {
@@ -42,11 +53,15 @@ function initNavigation() {
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 820) closeMenu();
+      if (window.innerWidth > 960) closeMenu();
     });
 
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeMenu();
+      if (e.key === 'Escape') {
+        const wasOpen = nav.classList.contains('is-open');
+        closeMenu();
+        if (wasOpen) toggle.focus();
+      }
     });
   }
 
@@ -58,10 +73,7 @@ function initNavigation() {
     });
 
     document.addEventListener('click', e => {
-      if (!dropdown.contains(e.target)) {
-        dropdown.classList.remove('open');
-        dropbtn.setAttribute('aria-expanded', 'false');
-      }
+      if (!dropdown.contains(e.target)) closeCategories();
     });
   }
 }
@@ -88,9 +100,21 @@ function populateCategories() {
   const navCategories = document.getElementById('nav-categories');
   const footerCategories = document.getElementById('footer-categories');
 
-  const navHTML = appData.categories.map(cat =>
-    `<a href="category.html?id=${encodeURIComponent(cat.id)}">${cat.name}</a>`
-  ).join('');
+  const categoryIcons = {
+    'red-meat': 'fa-drumstick-bite',
+    'white-meat': 'fa-egg',
+    seafood: 'fa-fish-fins',
+    legumes: 'fa-seedling',
+    vegetables: 'fa-carrot',
+    fruits: 'fa-apple-whole',
+    'nuts-seeds': 'fa-leaf',
+    dairy: 'fa-cheese',
+    'whole-grains': 'fa-wheat-awn'
+  };
+  const navHTML = appData.categories.map(cat => {
+    const icon = categoryIcons[cat.id] || 'fa-utensils';
+    return `<a href="category.html?id=${encodeURIComponent(cat.id)}"><span class="nav-icon" aria-hidden="true"><i class="fa-solid ${icon}"></i></span><span class="nav-label">${cat.name}</span></a>`;
+  }).join('');
 
   const footerHTML = appData.categories.map(cat =>
     `<li><a href="category.html?id=${encodeURIComponent(cat.id)}">${cat.name}</a></li>`
