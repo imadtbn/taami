@@ -21,12 +21,21 @@
     <div class="logo"><a href="index.html" aria-label="الصفحة الرئيسية"><i class="fa-solid fa-leaf" aria-hidden="true"></i><span>دليلك الغذائي الشامل</span></a></div>
     <nav class="main-nav" id="mainNav" aria-label="التنقل الرئيسي">
       <ul class="nav-links">
-        <li><a href="index.html">الرئيسية</a></li>
-        <li class="dropdown"><button class="dropbtn" type="button" aria-expanded="false" aria-controls="nav-categories">الفئات <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button><div class="dropdown-content" id="nav-categories"></div></li>
-        <li><a href="favorites.html">المفضلة</a></li>
-        <li><a href="about.html" >من نحن</a></li>
-        <li><a href="contact.html" >اتصل بنا</a></li>
-        <li class="mobile-search"><form action="search.html" method="GET" role="search"><label class="sr-only" for="mobile-q">ابحث في الأغذية</label><input id="mobile-q" type="search" name="q" placeholder="ابحث عن طعام..." required><button type="submit" aria-label="بحث"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button></form></li>
+        <li><a href="index.html"><span class="nav-icon" aria-hidden="true"><i class="fa-solid fa-house"></i></span><span class="nav-label">الرئيسية</span></a></li>
+        <li class="dropdown">
+          <button class="dropbtn" type="button" aria-expanded="false" aria-controls="nav-categories"><span class="nav-icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span><span class="nav-label">الفئات</span><i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i></button>
+          <div class="dropdown-content" id="nav-categories"></div>
+        </li>
+        <li><a href="favorites.html"><span class="nav-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span><span class="nav-label">المفضلة</span></a></li>
+        <li><a href="about.html"><span class="nav-icon" aria-hidden="true"><i class="fa-solid fa-circle-info"></i></span><span class="nav-label">من نحن</span></a></li>
+        <li><a href="contact.html"><span class="nav-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span><span class="nav-label">اتصل بنا</span></a></li>
+        <li class="mobile-search">
+          <form action="search.html" method="GET" role="search">
+            <label class="sr-only" for="mobile-q">ابحث في الأغذية</label>
+            <input id="mobile-q" type="search" name="q" placeholder="ابحث عن طعام..." required>
+            <button type="submit" aria-label="بحث"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+          </form>
+        </li>
       </ul>
     </nav>
     <div class="header-actions">
